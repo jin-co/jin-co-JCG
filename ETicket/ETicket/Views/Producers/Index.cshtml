@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Producer>
+
+@{
+    ViewData["Title"] = "List of Producers";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>@Html.DisplayNameFor(m => m.ProfilePictureURL)</th>
+                    <th>@Html.DisplayNameFor(m => m.FullName)</th>
+                    <th>@Html.DisplayNameFor(m => m.Bio)</th>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <th>Actions</th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var i in Model)
+                {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@i.ProfilePictureURL" style="max-width: 150px;" class="rounded-circle" />
+                    </td>
+                    <td class="align-middle">
+                        @i.FullName
+                    </td>
+                    <td class="align-middle">
+                        @i.Bio
+                    </td>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <td class="align-middle">
+                            <a class="btn btn-outline-primary"
+                               asp-action="Edit"
+                               asp-route-id="@i.Id">
+                                <i class="bi bi-pencil-square">Edit</i>
+                            </a> |
+                            <a class="btn btn-outline-primary"
+                               asp-action="Details"
+                               asp-route-id="@i.Id">
+                                <i class="bi bi-eye">Details</i>
+                            </a> |
+                            <a class="btn btn-danger text-light"
+                               asp-action="Delete"
+                               asp-route-id="@i.Id">
+                                <i class="bi bi-trash">Delete</i>
+                            </a>
+                        </td>
+                    }
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@*<div class="text-white" style="position: fixed; right: 25px; bottom:20px">
+    <a asp-controller="Producers"
+       asp-action="Create"
+       class="btn btn-success">
+        <i class="bi bi-plus-circle"></i>
+        Add new
+    </a>
+</div>*@
+
+@await Html.PartialAsync("PartialViews/_CreateItem", "Producers")
+
