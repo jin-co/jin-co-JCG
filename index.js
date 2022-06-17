@@ -1,5 +1,7 @@
+/** section 1 image box */
 const mainImage = document.querySelector('.main-img')
 const countEl = document.querySelector('.count')
+const mainText = document.querySelector('.main-text')
 let count = 0
 
 const loadPage = setInterval(() => {
@@ -9,5 +11,22 @@ const loadPage = setInterval(() => {
   countEl.style.opacity = `${1 - (count / 100)}`  
   if (count >= 100) {
     clearInterval(loadPage)
+    mainText.classList.add('show')
   }
-}, 50)
+}, 25)
+
+/** section 2 games selection */
+const panelsEl = document.querySelectorAll('.panel')
+
+panelsEl.forEach(e => {
+  e.addEventListener('mouseenter', () => {
+    shirinkPanels()
+    e.classList.add('expand')        
+  })
+});
+
+function shirinkPanels() {
+  panelsEl.forEach(e => {
+    e.classList.remove('expand')
+  });
+}
