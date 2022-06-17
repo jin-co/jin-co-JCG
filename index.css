@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&family=Roboto&family=Ubuntu&family=Fascinate&display=swap');
+
+:root {
+  --border-5: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins';
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* header */
+header {
+  height: 100px;
+  background-color: aqua;
+}
+
+header nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+h3 a {
+  text-decoration: none;
+}
+
+header nav ul {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+/* main */
+main {
+  min-height: 500px;
+}
+
+.main-img-box {
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.main-img {
+  /* main image styles */
+  height: 500px;
+  background: url('https://source.unsplash.com/random') center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;  
+  transition: .4s linear;
+}
+
+.main-img.blur {
+  filter: blur(100px);
+}
+
+.count {
+  height: 200px;
+  width: 200px;
+  font-size: 5rem;
+  color: #fff;     
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  transition: .4s linear;
+}
+
+.count::before {
+  content: '';
+  position: absolute;  
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: .2;
+  background-color: blue;
+}
+
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;    
+  transform: translate(-50%, -50%);
+  transition: .4s linear;
+  font-family: 'fascinate';
+  font-size: 4rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .2);
+  padding: 0 50px;
+  border-radius: var(--border-5);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+/* footer */
+footer {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
