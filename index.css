@@ -3,7 +3,7 @@
 :root {
   --border-5: 5px;
   --border-15: 15px;
-  --transition-speed-4: .4s;
+  --transition-speed-4: 0.4s;
   --transition-speed-10: 1s;
 }
 
@@ -60,7 +60,7 @@ main {
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 140px;
 }
 
 .main-img-box {
@@ -76,8 +76,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;  
-  transition: .4s linear;
+  z-index: 1;
+  transition: 0.4s linear;
   overflow: hidden;
 }
 
@@ -89,7 +89,7 @@ main {
   height: 200px;
   width: 200px;
   font-size: 5rem;
-  color: #fff;     
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,34 +97,34 @@ main {
   align-items: center;
   justify-content: center;
   transform: translate(-50%, -50%);
-  transition: .4s linear;
+  transition: 0.4s linear;
 }
 
 .count::before {
   content: '';
-  position: absolute;  
+  position: absolute;
   color: #fff;
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  opacity: .2;
+  opacity: 0.2;
   background-color: blue;
 }
 
 .main-text {
   position: absolute;
   top: 50%;
-  left: 50%;      
+  left: 50%;
   font-family: 'Fascinate';
   font-size: 4rem;
   color: #fff;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 0 50px;
   border-radius: var(--border-5);
   opacity: 0;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) translateY(50px);
-  transition: .4s cubic-bezier(0.68,-0.55,0.27,1.55);;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .show {
@@ -145,7 +145,10 @@ main {
   align-items: flex-end;
   width: 50px;
   overflow: hidden;
-  transition: var(--transition-speed-10) cubic-bezier(0.59,-0.53,0,1);;
+  transition: var(--transition-speed-10) cubic-bezier(0.59, -0.53, 0, 1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .expand {
@@ -153,7 +156,7 @@ main {
 }
 
 .panel h3 {
-  opacity: 0;    
+  opacity: 0;
   white-space: nowrap;
   transition: var(--transition-speed-10) ease-in var(--transition-speed-4);
 }
@@ -161,11 +164,15 @@ main {
 .panel.expand h3 {
   opacity: 1;
   transform: translate(10px, -20px);
-  
 }
 
 .panel h3 a {
   color: #fff;
+  transition: var(--transition-speed-4) ease;
+}
+
+.panel h3 a:hover {
+  color: aquamarine !important;
 }
 
 /* footer */
@@ -177,8 +184,21 @@ footer {
   background-color: aliceblue;
 }
 
-
 /* shared */
 section {
   min-height: 500px;
+  position: relative;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, .2);
+}
+
+.btn-home {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+}
+
+.section-title {
+  position: absolute;
+  top: -50px;
 }

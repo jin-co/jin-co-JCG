@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Muli&family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serifs;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.btn-start {
+    width: 200px !important;
+    font-size: 2rem;
+}
+
+.pages {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s cubic-bezier(0.35,0.16,0.68,1.57);
+}
+
+.page-one {
+    
+}
+
+/* second page */
+.page-two {
+    position: absolute;
+    padding: 15px;
+    transform: translate(100%, -100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.page-two .img {
+    background-image: url('https://unsplash.com/photos/7Z03R1wOdmI');
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.page-two .container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.page-two .title {
+    margin-bottom: 20px;
+}
+
+.page-two .players {
+    margin-left: auto;
+}
+
+.page-two .players input {
+    width: 110px;
+    padding: 0 15px;
+    text-align: right;
+}
+
+.page-two .container .players input:focus {
+    outline: none;
+}
+
+.page-two .container .row {
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    margin: 20px 0;
+}
+
+/* third page */
+.page-three {
+    position: absolute;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;    
+}
+
+.page-three .container {    
+    margin: 0 auto;
+    display: flex;
+}
+
+.page-three .display-box {    
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.selected-players-box {
+    min-height: 100px; 
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;    
+}
+
+/* fourth page */
+.page-four {
+    display: flex;
+    flex-direction: column;    
+}
+
+.sum-up-box {       
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+/* styles for pockets */
+.character-box {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;    
+    position: relative;
+    transition: .4s ease;
+    animation: shell 1s forwards; /*test*/
+}
+
+.character-box .img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+/* styles for pocket encapsulation */
+.character-box.pick .img {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(0,0,0,1) 46%, rgba(0,0,0,1) 52%, rgba(255,0,0,1) 52%);
+    border: 1px solid #000;
+    animation: shell 2s ease forwards;
+}
+
+@keyframes shell {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.circle {
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    background-color: #000;
+    opacity: .2;
+    bottom: 0px;
+    right: 40px;
+    transform: rotateX(70deg) rotateY(-10deg);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.character-box.pick .circle {
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;    
+    z-index: 2;
+    transform: rotateX(0) rotateY(0) translate(-50%, -50%);
+    background-color: #fff;
+    border: 5px solid #000;
+    opacity: 1;
+    background-color: transparent;
+    animation: shell 2s ease forwards;
+}
+
+.character-box.pick .circle::before {
+    content: '';
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;    
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.character-box.pick .circle::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+    opacity: .8;
+    z-index: inherit;
+}
+
+/* styles for pocket selection effect */
+.character-box.select .img {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(0,0,0,1) 46%, rgba(0,0,0,1) 52%, rgba(0,255,0,1) 52%);
+}
+
+
+
+/* shared */
+.btn {
+    width: 100px;    
+    margin: 2px;
+}
+
+
+
+
+
+
+
