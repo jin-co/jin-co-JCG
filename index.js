@@ -30,3 +30,16 @@ function shirinkPanels() {
     e.classList.remove('expand')
   });
 }
+
+/** common */
+const arrowBoxes = document.querySelectorAll('.arrow-box')
+
+window.addEventListener('scroll', () => {
+  arrowBoxes.forEach(arrow => {
+    if(arrow.getBoundingClientRect().top < 600) {
+      arrow.classList.add('show-arrow')
+    } else {
+      arrow.classList.remove('show-arrow')
+    }
+  });  
+})
