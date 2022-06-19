@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Muli&family=Press+Start+2P&display=swap');
 
 :root { /* using variable */
-    --line-fill: #3498db;
+    --line-fill: #F94C66;
     --line-empty: #e0e0e0;
 }
 
@@ -222,7 +222,7 @@ body {
     background: linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(0,0,0,1) 46%, rgba(0,0,0,1) 52%, rgba(0,255,0,1) 52%);
 }
 
-/* shared */
+/* #shaF94C66 */
 .btn {
     width: 100px;    
     margin: 2px;
@@ -288,7 +288,7 @@ body {
     width: 100%;
     border-radius: 50%;
     border: solid 4px transparent;
-    border-bottom-color: red;
+    border-bottom-color: var(--line-fill);
     animation: effect 1s linear forwards 1s;
 }
 
@@ -311,8 +311,8 @@ body {
     height: 300px;
     width: 300px;
     position: fixed;
-    top: 100px;
-    right: 200px;
+    top: 0px;
+    right: 0px;
     background-color: rgba(0, 0, 0, .4);
     transform: rotate(-90deg);    
     transform-origin: top right;
@@ -332,7 +332,7 @@ body {
     position: absolute;
     top: -100px;
     right: -100px;
-    background-color: red;
+    background-color: var(--line-fill);
     border-radius: 50%;
 }
 
@@ -343,14 +343,33 @@ body {
 
 .menu-icon-open {    
     width: 50px;    
-    transform: translate(35px, 120px) rotate(360deg);
+    transform: translate(35px, 30px) rotate(90deg);
 }
 
 .menu-icon-close {
     width: 50px;    
-    transform: translate(50px, 120px);
+    transform: translate(-40px, 120px);
 }
 
+.menu-item-box {    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;    
+}
 
+.menu-item-box a {    
+    width: 90%;
+    color: #fff;
+    display: block;
+    opacity: 0;
+    transform: translateX(150px);
+    transition: .4s ease-out .5s;
+}
+
+.menu-box.rotate .menu-item-box a  {
+    opacity: 1;
+    transform: translateX(0px);
+}
 
 

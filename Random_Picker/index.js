@@ -185,6 +185,7 @@ function shufflePage(index) {
 
 const line = document.querySelector('.line')
 const nums = document.querySelectorAll('.num')
+addCircle(1)
 function updateStatusBar(idx) {
   console.log('index: ', idx)
   clearCircles()
