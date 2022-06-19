@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+:root { /* using variable */
+  --line-fill: #76BA99;
+  
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

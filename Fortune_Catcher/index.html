@@ -1,76 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="./main.css">
-    <script defer src="./index.js"></script>    
-</head>
-<body>
-  <a class="btn-home" href="/">Home</a>
-  
-  <div class="page-box">
-    <div class="pages page-start">
-      <p class="title">Fortune generator</p>
-      <button class="btn-play btn">Play</button>
-    </div>
-    
-    <div class="pages page-choice">
-      <p class="title">Choose Anything You Want</p>
-      <div class="choice-box">
-        <div class="choices">
-          <h2 class="name">Peach</h2>
-          <img src="http://pngimg.com/uploads/peach/peach_PNG4869.png" alt="peach">
-        </div>
-
-        <div class="choices">
-          <h2 class="name">Money</h2>
-          <img src="https://pngimg.com/uploads/money/money_PNG3523.png" alt="caribbean"/>
-        </div>
-
-        <div class="choices">
-          <h2 class="name">Love</h2>
-          <img src="https://pngimg.com/uploads/heart/heart_PNG51192.png" alt="heart"/>
-        </div>
-        
-        <div class="choices">
-          <h2 class="name">Dream</h2>
-          <img src="http://pngimg.com/uploads/dreamcatcher/dreamcatcher_PNG8.png" alt="dreamcatcher"/>
-        </div>
-        
-        <div class="choices">
-          <h2 class="name">Luck</h2>
-          <img src="https://pngimg.com/uploads/horseshoe/horseshoe_PNG16.png" alt="luck"/>
-        </div>
-        <div class="choices">
-          <h2 class="name">Coffee</h2>
-          <img src="https://pngimg.com/uploads/mug_coffee/mug_coffee_PNG16824.png" alt="coffee"/>
-        </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="../shared/retatingMenu/rotate.css" />
+    <script defer src="./index.js"></script>
+    <script defer src="../shared/retatingMenu/rotate.js"></script>
+  </head>
+  <body>
+    <!-- rotating box - U-3 -->
+    <div class="menu-box">
+      <div class="menu-circle">
+        <i class="menu-icon-open fas fa-hamburger fa-3x text-light"></i>
+        <i class="menu-icon-close fas fa-times fa-3x text-light"></i>
+      </div>
+      <div class="menu-item-box">
+        <a class="btn-home" href="/"> <i class="fas fa-home fa-2x"></i> Home</a>
       </div>
     </div>
-    
-    <div class="pages page-play">
-      <div class="page-third-text-box">
-        <h2 class="page-third-text">
-          Time: 
-          <span class="minute">00</span>:<span class="second">00</span>
-        </h2>
 
-        <button class="btn-reset btn">
-          Start over
-        </button>
-
-        <h2 class="page-third-text">
-          Score: 
-          <span class="score">0</span>
-        </h2>
+    <div class="page-box">
+      <div class="pages page-start">
+        <p class="title">Fortune generator</p>
+        <button class="btn-play btn">Play</button>
       </div>
-      <div class="game-screen"></div>
+
+      <div class="pages page-choice">
+        <p class="title">Choose Anything You Want</p>
+        <div class="choice-box">
+          <div class="choices">
+            <h2 class="name">Peach</h2>
+            <img
+              src="http://pngimg.com/uploads/peach/peach_PNG4869.png"
+              alt="peach"
+            />
+          </div>
+
+          <div class="choices">
+            <h2 class="name">Money</h2>
+            <img
+              src="https://pngimg.com/uploads/money/money_PNG3523.png"
+              alt="caribbean"
+            />
+          </div>
+
+          <div class="choices">
+            <h2 class="name">Love</h2>
+            <img
+              src="https://pngimg.com/uploads/heart/heart_PNG51192.png"
+              alt="heart"
+            />
+          </div>
+
+          <div class="choices">
+            <h2 class="name">Dream</h2>
+            <img
+              src="http://pngimg.com/uploads/dreamcatcher/dreamcatcher_PNG8.png"
+              alt="dreamcatcher"
+            />
+          </div>
+
+          <div class="choices">
+            <h2 class="name">Luck</h2>
+            <img
+              src="https://pngimg.com/uploads/horseshoe/horseshoe_PNG16.png"
+              alt="luck"
+            />
+          </div>
+          <div class="choices">
+            <h2 class="name">Coffee</h2>
+            <img
+              src="https://pngimg.com/uploads/mug_coffee/mug_coffee_PNG16824.png"
+              alt="coffee"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="pages page-play">
+        <div class="page-third-text-box">
+          <h2 class="page-third-text">
+            Time:
+            <span class="minute">00</span>:<span class="second">00</span>
+          </h2>
+
+          <button class="btn-reset btn">Start over</button>
+
+          <h2 class="page-third-text">
+            Score:
+            <span class="score">0</span>
+          </h2>
+        </div>
+        <div class="game-screen"></div>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
