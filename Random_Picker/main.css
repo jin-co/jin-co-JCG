@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Muli&family=Press+Start+2P&display=swap');
 
+:root { /* using variable */
+    --line-fill: #3498db;
+    --line-empty: #e0e0e0;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -217,16 +222,134 @@ body {
     background: linear-gradient(0deg, rgba(255,255,255,1) 46%, rgba(0,0,0,1) 46%, rgba(0,0,0,1) 52%, rgba(0,255,0,1) 52%);
 }
 
-
-
 /* shared */
 .btn {
     width: 100px;    
     margin: 2px;
 }
 
+.status-box {    
+    /* status bar styles */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
 
+.nums {      
+    width: 300px;  
+    display: flex;    
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
 
+.num {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid transparent;
+    z-index: 2;
+    background-color: #fff;
+    transition: .4s linear;
+    position: relative;
+}
+
+.line {
+    height: 5px;
+    width: 0%;
+    position: absolute;
+    border-radius: 5px;    
+    background-color: var(--line-fill);        
+    transition: .4s linear;
+}
+
+.status-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%;    
+    background-color: var(--line-empty);
+    z-index: -1;
+}
+
+.fill {
+    border-color: var(--line-fill);
+}
+
+.final-effect::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: solid 4px transparent;
+    border-bottom-color: red;
+    animation: effect 1s linear forwards 1s;
+}
+
+@keyframes effect {
+    0% {        
+        transform: rotate(0);
+    }
+
+    90% {
+        transform: rotate(370deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.menu-box {
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    top: 100px;
+    right: 200px;
+    background-color: rgba(0, 0, 0, .4);
+    transform: rotate(-90deg);    
+    transform-origin: top right;
+    transition: .4s ease-out;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.rotate {
+    transform: rotate(0deg);   
+}
+
+.menu-circle {
+    /* rotating menu styles */
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.fas {
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-icon-open {    
+    width: 50px;    
+    transform: translate(35px, 120px) rotate(360deg);
+}
+
+.menu-icon-close {
+    width: 50px;    
+    transform: translate(50px, 120px);
+}
 
 
 
