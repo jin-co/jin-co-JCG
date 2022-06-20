@@ -69,6 +69,7 @@ main {
   height: 500px;
   width: 100%;
   position: relative;
+  padding: 0;
 }
 
 .main-img {
@@ -134,10 +135,10 @@ main {
   transform: translate(-50%, -50%) translateY(0);
 }
 
+/* section 1 javascript */
 .games-box {
   /* main image section styles */
-  display: flex;
-  padding: 10px;
+  display: flex;  
   gap: 10px;
 }
 
@@ -179,6 +180,64 @@ main {
   color: aquamarine !important;
 }
 
+/* section 2 c# and monogame */
+.games-box-c {
+  display: flex;    
+}
+
+.games-box-c .panel-left, .panel-right{
+  overflow: hidden;
+  transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.panel-left {
+  width: 30%;
+  background: blue;  
+  position: relative;
+}
+
+.panel-right {
+  width: 70%;
+  position: relative;
+}
+
+.panel-right > div {
+  transform: translateY(-300%);
+}
+
+.panel-img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);  
+}
+
+.btn-panel {
+  height: 50px;
+  width: 50px;    
+  position: absolute;  
+  top: 50%;
+  transform: translateY(-50%);     
+  border: none; 
+  color: #fff;
+  z-index:10 ;
+}
+
+.btn-panel-up {
+  position: absolute;    
+  right: 0;    
+  transform: translateY(-50px);     
+  border-radius: 5px 0 0 5px;
+}
+
+.btn-panel-down {
+  position: absolute;    
+  left: 0;    
+  transform: translateY(5px);     
+  border-radius: 0 5px 5px 0;
+}
+
 /* footer */
 footer {
   height: 300px;
@@ -192,6 +251,8 @@ footer {
 section {
   min-height: 500px;
   position: relative;
+  padding: 10px;
+  margin-top: 10px;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
 }
 
