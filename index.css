@@ -284,7 +284,7 @@ main {
 }
 
 .show-info {
-  transform: translateX(-10%);
+  transform: translateX(150px);
 }
 
 /* section 3 c# and monogame */
