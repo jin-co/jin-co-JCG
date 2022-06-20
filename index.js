@@ -31,6 +31,18 @@ function shirinkPanels() {
   })
 }
 
+const info4 = document.querySelector('.img-4-guide-btn')
+const info4Text = document.querySelector('.img-4-guide-text')
+info4.addEventListener('mouseover', () => {
+  console.log('hhh')
+  info4Text.classList.add('show-info')
+})
+
+info4.addEventListener('mouseleave', () => {
+  console.log('hhh')
+  info4Text.classList.remove('show-info')
+})
+
 /** section 3 games (c# an monogame) selection */
 const btnUp = document.querySelector('.btn-panel-up')
 const btnDown = document.querySelector('.btn-panel-down')

@@ -209,8 +209,24 @@ main {
   height: 100%;
   width: 100%;
   background-position: center;
-  background-size: cover;
-  transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);  
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 2rem;
+  color: #efefef;
+  transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);    
+}
+
+.panel-img a {
+  height: 100%;
+  width: 100%;
+}
+
+.panel-img a:hover {
+  background-color: rgba(0, 0, 0, .3);
 }
 
 .btn-panel {
@@ -219,7 +235,7 @@ main {
   position: absolute;  
   top: 50%;
   transform: translateY(-50%);     
-  border: none; 
+  border-color: transparent; 
   color: #fff;
   z-index:10 ;
 }
@@ -228,14 +244,47 @@ main {
   position: absolute;    
   right: 0;    
   transform: translateY(-50px);     
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;  
 }
 
 .btn-panel-down {
   position: absolute;    
   left: 0;    
+  color: #2a86ba;
   transform: translateY(5px);     
   border-radius: 0 5px 5px 0;
+}
+
+.img-4-guide-box {  
+  height: 100%;
+  width: 70%;  
+  position: absolute;
+  right: 0;
+}
+
+.img-4-guide-text {
+  height: 100%;
+  width: 600px;  
+  background-color: rgba(42, 134, 186, .8);
+  padding: 10px 200px 10px 10px;
+  transform: translateX(200%);
+  transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-4-guide-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2a86ba;  
+  color: #efefef;
+  border: none;
+}
+
+.show-info {
+  transform: translateX(-10%);
 }
 
 /* section 3 c# and monogame */
