@@ -125,6 +125,7 @@ main {
   padding: 0 50px;
   border-radius: var(--border-5);
   opacity: 0;
+  text-align: center;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) translateY(50px);
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -216,8 +217,16 @@ main {
   justify-content: center;
   position: relative;
   font-size: 2rem;
-  color: #efefef;
+  color: #efefef;  
   transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);    
+}
+
+.panel-img p {
+  word-wrap: break-word;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 .panel-img a {
@@ -235,9 +244,9 @@ main {
   position: absolute;  
   top: 50%;
   transform: translateY(-50%);     
-  border-color: transparent; 
-  color: #fff;
+  border-color: transparent;   
   z-index:10 ;
+  background-color: #efefef;
 }
 
 .btn-panel-up {
@@ -249,42 +258,52 @@ main {
 
 .btn-panel-down {
   position: absolute;    
-  left: 0;    
-  color: #2a86ba;
+  left: 0;      
   transform: translateY(5px);     
   border-radius: 0 5px 5px 0;
 }
 
-.img-4-guide-box {  
-  height: 100%;
-  width: 70%;  
+.img-guide-box {  
+  height: 100%;  
   position: absolute;
   right: 0;
 }
 
-.img-4-guide-text {
+.img-guide-text {
   height: 100%;
-  width: 600px;  
-  background-color: rgba(42, 134, 186, .8);
-  padding: 10px 200px 10px 10px;
+  width: 500px;  
+  position: absolute;
+  right: 0;  
+  padding: 10px 70px 10px 10px;
   transform: translateX(200%);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
   transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.img-4-guide-btn {
+.img-guide-text h4 {
+  margin: 10px 10px 40px;  
+  letter-spacing: 1px;
+}
+
+.img-guide-text p {  
+  letter-spacing: 1px;
+}
+
+.img-guide-btn {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
   background-color: #2a86ba;  
   color: #efefef;
   border: none;
+  transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .show-info {
-  transform: translateX(150px);
+  transform: translateX(0px);
 }
 
 /* section 3 c# and monogame */
