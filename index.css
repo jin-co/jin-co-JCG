@@ -259,7 +259,14 @@ main {
   transform: translateY(-50%);     
   border-color: transparent;   
   z-index:10 ;
-  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;  
+}
+
+.btn-panel:hover {
+  background-color: #efefef;  
 }
 
 .btn-panel-up {
@@ -267,6 +274,14 @@ main {
   right: 0;    
   transform: translateY(-50px);     
   border-radius: 5px 0 0 5px;  
+}
+
+.btn-panel-up:focus {  
+  transform: translateY(-50px) !important;       
+}
+
+.btn-panel-up:active {  
+  transform: translateY(-50px) !important;       
 }
 
 .btn-panel-down {
