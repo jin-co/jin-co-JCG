@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/833be080c6.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="./index.js"></script>
+    <script defer src="./index.js"></script>    
   </head>
   <body>
     <header>
@@ -49,7 +49,7 @@
 
       <section class="games-box">
         <!-- scroll arrow -->
-        <div class="arrow-box" style="background-color: #2a86ba;">
+        <div class="arrow-box" style="background-color: #2a86ba">
           <h2 class="section-title">Javascript</h2>
         </div>
         <!-- / scroll arrow -->
@@ -110,7 +110,7 @@
 
       <section class="games-box-c" id="c-charp-game">
         <!-- scroll arrow -->
-        <div class="arrow-box arrow-box-even" style="background-color: #fd3555;">
+        <div class="arrow-box arrow-box-even" style="background-color: #fd3555">
           <h2 class="section-title">C# / Monogame</h2>
         </div>
         <!-- / scroll arrow -->
@@ -145,7 +145,7 @@
               download="monorpg"
             ></a>
           </div>
- 
+
           <div
             class="panel-img img-2"
             style="background-image: url('./assets/images/monospace.png')"
@@ -187,7 +187,7 @@
 
       <section id="about">
         <!-- scroll arrow -->
-        <div class="arrow-box" style="background-color: #4B5D67;">
+        <div class="arrow-box" style="background-color: #4b5d67">
           <h2 class="section-title">About</h2>
         </div>
         <!-- / scroll arrow -->
@@ -195,10 +195,68 @@
 
       <section id="contact" class="contact-box">
         <!-- scroll arrow -->
-        <div class="arrow-box arrow-box-even" style="background-color: #3BACB6;">
+        <div class="arrow-box arrow-box-even" style="background-color: #3bacb6">
           <h2 class="section-title">Contact</h2>
         </div>
         <!-- / scroll arrow -->
+
+        <h1>Please Login</h1>
+        <form>
+            <div class="form-control">
+                <input type="text" required>
+                <label>Email</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+
+            <button class="btn">Login</button>
+
+            <p class="text">Don't have an account? <a href="#">Register</a></p>
+        </form>
+      </section>
+
+      <section id="survey" class="contact-box">
+        <!-- scroll arrow -->
+        <div class="arrow-box" style="background-color: #AB46D2">
+          <h2 class="section-title">Survey</h2>
+        </div>
+        <!-- / scroll arrow -->
+
+        <div id="panel" class="panel-container">
+          <strong
+            >How satisfied are you with our <br />
+            customer support performance?</strong
+          >
+          <div class="ratings-container">
+            <div class="rating">
+              <img
+                src="https://image.flaticon.com/icons/svg/187/187150.svg"
+                alt=""
+              />
+              <small>Unhappy</small>
+            </div>
+
+            <div class="rating">
+              <img
+                src="https://image.flaticon.com/icons/svg/187/187136.svg"
+                alt=""
+              />
+              <small>Neutral</small>
+            </div>
+
+            <div class="rating active">
+              <img
+                src="https://image.flaticon.com/icons/svg/187/187133.svg"
+                alt=""
+              />
+              <small>Satisfied</small>
+            </div>
+          </div>
+          <button class="btn" id="send">Send Review</button>
+        </div>
       </section>
     </main>
 
