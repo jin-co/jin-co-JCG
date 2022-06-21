@@ -51,10 +51,23 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
+  width: 170px;
+  text-align: center;
+  border: 3px solid transparent;
+}
+
+header nav ul li:hover {
+  border-bottom-color: #E8630A;
+}
+
+header nav ul li:active {
+  transform: scale(.97);
 }
 
 header nav ul li a {
   text-decoration: none;
+  color: #383838;
+  transition: .4s ease;
 }
 
 /* main */
@@ -66,7 +79,7 @@ main {
 }
 
 .main-img-box {
-  height: 500px;
+  height: 700px;
   width: 100%;
   position: relative;
   padding: 0;
@@ -74,7 +87,7 @@ main {
 
 .main-img {
   /* main image section styles */
-  height: 500px;
+  height: 100%;
   background: url('https://source.unsplash.com/random') center center/cover;
   display: flex;
   align-items: center;
@@ -344,7 +357,7 @@ footer {
 
 /* shared */
 section {
-  min-height: 500px;
+  min-height: 600px;
   position: relative;
   padding: 10px;
   margin-top: 10px;

@@ -39,11 +39,11 @@ const gameContents = [
     bgColor: '#2a86ba',
     fontColor: '#fff',
     title: 'mono shooting',
-    description:
-      `<h4>
+    description: `
+      <h4>
         &nbsp;&nbsp;&nbsp;&nbsp;The object of this game is to get to the point without getting hit by enemies
-       </h4>
-       <ol>
+      </h4>
+      <ol>
         <p>
           To run:
         </p>
@@ -59,26 +59,89 @@ const gameContents = [
         <li>
          Enjoy the game
         </li>
-       </ol>
+      </ol>
       `,
   },
   {
     bgColor: '#fd3555',
     fontColor: '#fff',
     title: '',
-    description: '',
+    description: `
+      <h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;Try to hit as many targets as you can using mouse in a limited time
+      </h4>
+      <ol>
+        <p>
+          To run:
+        </p>
+        <li>
+         Download the installer by clicking the game image box 
+        </li>
+        <li>
+         Unzip the file 
+        </li>
+        <li>
+         Find the 'Shooting.exe' and run it (double click or right click and click 'open')
+        </li>
+        <li>
+         Enjoy the game
+        </li>
+      </ol>
+    `,
   },
   {
-    bgColor: '#252e33',
+    bgColor: '#816797',
     fontColor: '#fff',
     title: '',
-    description: '',
+    description: `
+      <h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;Fly into the space dodging  asteroids 
+      </h4>
+      <ol>
+        <p>
+          To run:
+        </p>
+        <li>
+         Download the installer by clicking the game image box 
+        </li>
+        <li>
+         Unzip the file 
+        </li>
+        <li>
+         Find the 'Spaceship.exe' and run it (double click or right click and click 'open')
+        </li>
+        <li>
+         Enjoy the game
+        </li>
+      </ol>
+    `,
   },
   {
     bgColor: '#ffb866',
-    fontColor: '#fff',
+    fontColor: '#3f3f3f',
     title: '',
-    description: '',
+    description: `
+      <h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;Monsters are coming to get you, defeat them to protect your town  
+      </h4>
+      <ol>
+        <p>
+          To run:
+        </p>
+        <li>
+         Download the installer by clicking the game image box 
+        </li>
+        <li>
+         Unzip the file 
+        </li>
+        <li>
+         Find the 'RPG.exe' and run it (double click or right click and click 'open')
+        </li>
+        <li>
+         Enjoy the game
+        </li>
+      </ol>
+    `,
   },
 ]
 
@@ -126,7 +189,7 @@ const info = document.querySelector('.img-guide-btn')
 const infoText = document.querySelector('.img-guide-text')
 const infoBtn = document.querySelector('.img-guide-btn')
 info.addEventListener('mouseover', () => {
-  infoText.classList.add('show-info')  
+  infoText.classList.add('show-info')
 })
 
 infoText.addEventListener('mouseleave', () => {
@@ -141,7 +204,7 @@ function addContents(frameIdx = 0) {
   const index = frameIdx / 100
   infoText.innerHTML = gameContents[`${index}`].description
   infoText.style.backgroundColor = `${gameContents[index].bgColor}`
-  infoText.style.color = `${gameContents[index].fontColor}` 
+  infoText.style.color = `${gameContents[index].fontColor}`
   infoBtn.style.backgroundColor = `${gameContents[index].bgColor}`
 }
 
