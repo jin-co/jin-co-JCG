@@ -208,7 +208,25 @@ function addContents(frameIdx = 0) {
   infoBtn.style.backgroundColor = `${gameContents[index].bgColor}`
 }
 
-/** section 5 survey */
+/** section 5 contact me */
+const contactMeTitle = document.querySelector('.contact-me-title')
+const contactMeText = 'Contact Me'
+let contactMeIndex = 1
+writeContactTitle()
+
+function writeContactTitle() {
+  contactMeTitle.innerText = contactMeText.slice(0, contactMeIndex)
+  contactMeIndex++
+  if(contactMeIndex > contactMeText.length) {
+    contactMeIndex = 1
+  }
+  setTimeout(writeContactTitle, 300)
+}
+
+
+console.log(contactMeText)
+
+/** section 6 survey */
 const ratings = document.querySelectorAll('.rating')
 const ratingsContainer = document.querySelector('.ratings-container')
 const sendBtn = document.querySelector('#send')

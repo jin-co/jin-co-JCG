@@ -337,6 +337,11 @@ main {
 /* section 4 about */
 
 /* section 5 contact */
+.contact-me-title {
+  width: 300px;
+  text-align: center;
+}
+
 .contact-me-form {
   height: 400px;
   width: 400px;
@@ -346,6 +351,7 @@ main {
   align-items: center;
   justify-content: space-around;
   padding: 10px 20px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2);
 }
 
 .contact-me-form input {
@@ -361,12 +367,26 @@ main {
   outline: none;
 }
 
+.contact-me-form input::placeholder {
+  color: #fff;
+}
+
 .contact-me-form textarea {
   width: 100%;
   background-color: transparent;
   border: 2px solid #fff;  
   color: #fff;
   padding: 5px;
+}
+
+.contact-me-form textarea::placeholder {  
+  color: #fff;
+}
+
+.contact-me-btn {
+  width: 100%;
+  background-color: #73777B;
+
 }
 
 .contact-me-form textarea:focus {
