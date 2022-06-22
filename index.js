@@ -210,21 +210,25 @@ function addContents(frameIdx = 0) {
 
 /** section 5 contact me */
 const contactMeTitle = document.querySelector('.contact-me-title')
-const contactMeText = 'Contact Me'
+const contactMeTitleText = 'Contact Me'
 let contactMeIndex = 1
 writeContactTitle()
 
 function writeContactTitle() {
-  contactMeTitle.innerText = contactMeText.slice(0, contactMeIndex)
+  contactMeTitle.innerText = contactMeTitleText.slice(0, contactMeIndex)
   contactMeIndex++
-  if(contactMeIndex > contactMeText.length) {
+  if(contactMeIndex > contactMeTitleText.length) {
     contactMeIndex = 1
   }
   setTimeout(writeContactTitle, 300)
 }
 
+const contactMeFieldLabels = document.querySelectorAll('.contact-me-form .form-control label')
+contactMeFieldLabels.forEach(label => {
+  console.log(label)
+  label.innerHTML = label.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`).join('')
+})
 
-console.log(contactMeText)
 
 /** section 6 survey */
 const ratings = document.querySelectorAll('.rating')

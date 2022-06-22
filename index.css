@@ -343,15 +343,16 @@ main {
 }
 
 .contact-me-form {
-  height: 400px;
+  
   width: 400px;
-  background: #302d2b;
+  background: #a7988f;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 10px 20px;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2);
+  position: relative;
 }
 
 .contact-me-form input {
@@ -367,30 +368,88 @@ main {
   outline: none;
 }
 
-.contact-me-form input::placeholder {
-  color: #fff;
-}
-
 .contact-me-form textarea {
   width: 100%;
-  background-color: transparent;
-  border: 2px solid #fff;  
-  color: #fff;
-  padding: 5px;
-}
-
-.contact-me-form textarea::placeholder {  
-  color: #fff;
 }
 
 .contact-me-btn {
   width: 100%;
-  background-color: #73777B;
-
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: transparent;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  margin-bottom: 15px;
 }
 
 .contact-me-form textarea:focus {
   outline: none;
+}
+
+.contact-me-form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+  background-color: transparent;
+}
+
+.contact-me-form-control input {
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.contact-me-form-control textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.contact-me-form-control input:focus,
+.contact-me-form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.contact-me-form-control textarea:focus,
+.contact-me-form-control textarea:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.contact-me-form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.contact-me-form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: .3s cubic-bezier(.68, -.55, .265, 1.55);
+}
+
+.contact-me-form-control input:focus + label span,
+.contact-me-form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+
+.contact-me-form-control textarea:focus + label span,
+.contact-me-form-control textarea:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
 }
 
 /* section 6 survey */

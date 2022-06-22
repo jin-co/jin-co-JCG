@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/833be080c6.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="./index.js"></script>    
+    <script defer src="./index.js"></script>
   </head>
   <body>
     <header>
@@ -200,18 +200,29 @@
         </div>
         <!-- / scroll arrow -->
 
-        <h2 class="contact-me-title">Contact me</h2>
+        <h2 class="contact-me-title">...</h2>
         <form action="" class="contact-me-form">
-          <input type="text" placeholder="your name">
-          <input type="email" placeholder="email">
-          <textarea placeholder="message"></textarea>
+          <div class="form-control contact-me-form-control">
+            <input class="contact-me-field-input" type="text" required />
+            <label>Your Name</label>
+          </div>
+
+          <div class="form-control contact-me-form-control">
+            <input class="contact-me-field-input" type="email" required />
+            <label>Email</label>
+          </div>
+
+          <div class="form-control contact-me-form-control">
+            <textarea class="contact-me-field-input" required></textarea>
+            <label>Message</label>
+          </div>
           <button class="contact-me-btn">Send</button>
         </form>
       </section>
 
       <section id="survey" class="contact-box">
         <!-- scroll arrow -->
-        <div class="arrow-box" style="background-color: #AB46D2">
+        <div class="arrow-box" style="background-color: #ab46d2">
           <h2 class="section-title">Survey</h2>
         </div>
         <!-- / scroll arrow -->
