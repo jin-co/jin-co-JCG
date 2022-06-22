@@ -17,6 +17,7 @@
 
 body {
   font-family: 'Poppins';
+  overflow-x: hidden;  
 }
 
 ::-webkit-scrollbar {
@@ -26,12 +27,14 @@ body {
 /* header */
 header {
   height: 100px;
+  width: 100%;  
   background-color: #efefef;
 }
 
 header nav {
   height: 100%;
-  display: flex;
+  width: 100%;
+  display: flex;  
   align-items: center;
   padding: 0 20px;
 }
@@ -42,8 +45,10 @@ h3 a {
 
 header nav ul {
   height: 100%;
+  width: 100%;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
   justify-content: space-around;
@@ -337,6 +342,14 @@ main {
 /* section 4 about */
 
 /* section 5 contact */
+.contact-box {
+  height: 200px;  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .contact-me-title {
   width: 300px;
   text-align: center;
@@ -539,7 +552,7 @@ footer {
   margin-top: 200px;  
 }
 
-.contact-box {
+.footer-contact-box {
   height: 200px;  
   width: 100%;
   display: flex;
@@ -547,15 +560,15 @@ footer {
   justify-content: space-around;
 }
 
-.contact-box i {
+.footer-contact-box i {
   cursor: pointer;
 }
 
-.contact-box a {
+.footer-contact-box a {
   color: #efefef;
 }
 
-.contact-box a:hover {
+.footer-contact-box a:hover {
   color: #E8630A;
 }
 
@@ -648,4 +661,10 @@ section {
 
 .show-arrow {
   transform: translateX(0);
+}
+
+@media all and (max-width: 700px) {
+  .contact-box {
+    flex-direction: column;
+  }
 }
