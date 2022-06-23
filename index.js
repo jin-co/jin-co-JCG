@@ -168,11 +168,13 @@ btnUp.addEventListener('click', () => {
 })
 
 // shuffles the slide downward
-btnDown.addEventListener('click', () => {
+btnDown.addEventListener('click', () => {  
   frameIndex -= 100
-  if (frameIndex < 0) {
+  
+  if (frameIndex <= 0) {
     frameIndex = 300
   }
+
   addContents(frameIndex)
 
   leftFrames.forEach((frame, idx) => {
