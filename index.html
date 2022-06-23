@@ -220,44 +220,43 @@
         </form>
       </section>
 
-      <section id="survey" class="contact-box">
+      <section id="survey" class="survey-container">
         <!-- scroll arrow -->
         <div class="arrow-box" style="background-color: #ab46d2">
           <h2 class="section-title">Survey</h2>
         </div>
         <!-- / scroll arrow -->
 
-        <div id="panel" class="panel-container">
-          <strong
-            >How satisfied are you with our <br />
-            customer support performance?</strong
-          >
-          <div class="ratings-container">
-            <div class="rating">
-              <img
-                src="https://image.flaticon.com/icons/svg/187/187150.svg"
-                alt=""
-              />
-              <small>Unhappy</small>
-            </div>
+        <div class="survey-box">
+          <strong>How would you rate this website?</strong>
+          <form class="survey-choice-form">
+            <div class="survey-choice-box">
+              <label class="survey-choice choice-great form-control">
+                <input type="radio" name="survey" />
+                <i class="fa-3x fas fa-grin-stars"></i>
+                Great
+              </label>
 
-            <div class="rating">
-              <img
-                src="https://image.flaticon.com/icons/svg/187/187136.svg"
-                alt=""
-              />
-              <small>Neutral</small>
+              <label class="survey-choice choice-great form-control">
+                <input type="radio" name="survey" />
+                <i class="fa-3x fas fa-meh"></i>
+                Average</label
+              >
+              <label class="survey-choice choice-great form-control">
+                <input type="radio" name="survey" />
+                <i class="fa-3x fas fa-frown"></i>
+                Bad</label
+              >
             </div>
+            <button type="submit" class="btn">Send</button>
+          </form>
 
-            <div class="rating active">
-              <img
-                src="https://image.flaticon.com/icons/svg/187/187133.svg"
-                alt=""
-              />
-              <small>Satisfied</small>
-            </div>
+          <div class="survey-result-box">
+            <i class="fas fa-laugh-wink fa-4x"></i>
+            <strong>Thank you!</strong>
+            <p class="survey-choice-selected"></p>
+            <small>Your feedback will make this web site better!</small>
           </div>
-          <button class="btn" id="send">Send Review</button>
         </div>
       </section>
     </main>
