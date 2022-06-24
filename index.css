@@ -451,8 +451,14 @@ main {
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.contact-me-form-control input:focus + label span,
-.contact-me-form-control input:valid + label span {
+.contact-me-form-control input[type="text"]:focus + label span,
+.contact-me-form-control input[type="text"]:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+
+.contact-me-form-control input[type="email"]:focus + label span,
+.contact-me-form-control input[type="email"]:valid + label span {
   color: lightblue;
   transform: translateY(-30px);
 }
@@ -461,6 +467,20 @@ main {
 .contact-me-form-control textarea:valid + label span {
   color: lightblue;
   transform: translateY(-30px);
+}
+
+.contact-me-form-control input[type="checkbox"] {
+  display: none;
+}
+
+.contact-me-form-control input[type="checkbox"] + label {
+  background-color: rgba(0, 0, 0, 0.2);  
+  cursor: pointer;  
+  border: 1px solid rebeccapurple;
+}
+
+.contact-me-form-control input[type="checkbox"]:checked + label {
+  background-color: aqua;
 }
 
 /* section 6 survey */
@@ -513,6 +533,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .survey-choice input {
