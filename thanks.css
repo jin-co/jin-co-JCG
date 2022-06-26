@@ -2,5 +2,9 @@
 
 body {
   height: 100vh;
-  background-color: #18978F !important;
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #18978F;
 }
