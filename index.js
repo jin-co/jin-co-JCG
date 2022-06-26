@@ -231,11 +231,6 @@ contactMeFieldLabels.forEach(label => {
   label.innerHTML = label.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`).join('')
 })
 
-// send email
-const contactMeForm = document.querySelector('.contact-me-form')
-contactMeForm.addEventListener('submit', (e) => {
-  
-})
 
 
 /** section 6 survey */
