@@ -451,14 +451,14 @@ main {
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.contact-me-form-control input[type="text"]:focus + label span,
-.contact-me-form-control input[type="text"]:valid + label span {
+.contact-me-form-control input[type='text']:focus + label span,
+.contact-me-form-control input[type='text']:valid + label span {
   color: lightblue;
   transform: translateY(-30px);
 }
 
-.contact-me-form-control input[type="email"]:focus + label span,
-.contact-me-form-control input[type="email"]:valid + label span {
+.contact-me-form-control input[type='email']:focus + label span,
+.contact-me-form-control input[type='email']:valid + label span {
   color: lightblue;
   transform: translateY(-30px);
 }
@@ -469,17 +469,17 @@ main {
   transform: translateY(-30px);
 }
 
-.contact-me-form-control input[type="checkbox"] {
+.contact-me-form-control input[type='checkbox'] {
   display: none;
 }
 
-.contact-me-form-control input[type="checkbox"] + label {
-  background-color: rgba(0, 0, 0, 0.2);  
-  cursor: pointer;  
+.contact-me-form-control input[type='checkbox'] + label {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   border: 1px solid rebeccapurple;
 }
 
-.contact-me-form-control input[type="checkbox"]:checked + label {
+.contact-me-form-control input[type='checkbox']:checked + label {
   background-color: aqua;
 }
 
@@ -541,17 +541,15 @@ main {
 }
 
 .survey-choice i:after {
-  width: 0;
-  transition: 0.4 ease;
-}
-
-.survey-choice input:checked + i::after {
   content: '';
-  height: 100%;
-  width: 0%;
+  height: 100%;  
   position: absolute;
   top: 0;
   left: 0;
+  animation: goOut 1s forwards;
+}
+
+.survey-choice input:checked + i::after {
   background: linear-gradient(
     90deg,
     rgba(201, 218, 50, 0.3) 91%,
@@ -560,16 +558,12 @@ main {
   animation: goIn 1s forwards;
 }
 
+.survey-choice:hover i::after {
+  border: 3px solid rgb(219, 235, 5);
+}
+
 .survey-result-box {
   transform: scale(0);
-}
-
-.survey-go-in {
-  animation: goIn 1s ease;
-}
-
-.survey-go-out {
-  animation: goOut 1s ease;
 }
 
 @keyframes goIn {
@@ -583,16 +577,22 @@ main {
 }
 
 @keyframes goOut {
-  10% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(1.2);
+  0% {
+    background: linear-gradient(
+      90deg,
+      rgba(201, 218, 50, 0.3) 91%,
+      rgb(219, 235, 5) 91%
+    );
+    width: 100%;
   }
 
   100% {
-    transform: scale(0);
+    background: linear-gradient(
+      90deg,
+      rgba(201, 218, 50, 0.3) 91%,
+      rgb(219, 235, 5) 91%
+    );
+    width: 0;
   }
 }
 
