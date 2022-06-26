@@ -342,12 +342,11 @@ main {
 
 /* section 4 about */
 .about-section-box {
-  
 }
 
 .about-box {
   height: 700px;
-  width: 100%;    
+  width: 100%;
   position: relative;
 }
 
@@ -356,48 +355,114 @@ main {
   width: 50%;
   position: absolute;
   overflow: hidden;
-  transition: .4s ease;
+  transition: 0.4s ease;
 }
 
 .about-left-top-box {
-  background: red center center/cover no-repeat;      
+  background: url('https://source.unsplash.com/_kUxT8WkoeY') center center/cover
+    no-repeat;
   top: 0;
   left: 0;
 }
 
-.about-left-bottom-box {
-  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover no-repeat;     
+.about-right-top-box {
+  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover
+    no-repeat;
   top: 0;
   right: 0;
 }
 
 .about-left-bottom-box {
-  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover no-repeat;    
+  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover
+    no-repeat;
   bottom: 0;
   left: 0;
 }
 
 .about-right-bottom-box {
-  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover no-repeat;    
+  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover
+    no-repeat;
   bottom: 0;
   right: 0;
 }
 
-
-
-.hover-left .about-left-top-box {
-  width: 90%;  
-}
-
-.hover-left .about-right-top-box {
-  width: 10% !important;
-}
-
-.hover-right .about-right-top-box {
+.hover-left-top .about-left-top-box {
+  height: 90%;
   width: 90%;
 }
 
-.hover-right .about-left-top-box {
+.hover-left-top .about-right-top-box {
+  height: 90%;
+  width: 10%;
+}
+
+.hover-left-top .about-left-bottom-box {
+  height: 10%;
+  width: 90%;
+}
+
+.hover-left-top .about-right-bottom-box {
+  height: 10%;
+  width: 10%;
+}
+
+.hover-right-top .about-right-top-box {
+  height: 90%;
+  width: 90%;
+}
+
+.hover-right-top .about-left-top-box {
+  height: 90%;
+  width: 10%;
+}
+
+.hover-right-top .about-left-bottom-box {
+  height: 10%;
+  width: 10%;
+}
+
+.hover-right-top .about-right-bottom-box {
+  height: 10%;
+  width: 90%;
+}
+
+.hover-left-bottom .about-left-bottom-box {
+  height: 90%;
+  width: 90%;
+}
+
+.hover-left-bottom .about-left-top-box {
+  height: 10%;
+  width: 90%;
+}
+
+.hover-left-bottom .about-right-top-box {
+  height: 10%;
+  width: 10%;
+}
+
+.hover-left-bottom .about-right-bottom-box {
+  height: 90%;
+  width: 10%;
+}
+
+.hover-right-bottom .about-right-bottom-box {
+  height: 90%;
+  width: 90%;
+}
+
+.hover-right-bottom .about-left-top-box {
+  height: 10%;
+  width: 10%;
+}
+
+.hover-right-bottom .about-right-top-box {
+  height: 10%;
+  width: 90%;
+}
+
+.hover-right-bottom .about-left-bottom-box {
+  height: 90%;
   width: 10%;
 }
 

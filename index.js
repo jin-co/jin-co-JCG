@@ -213,22 +213,40 @@ function addContents(frameIdx = 0) {
 /** section 4 about */
 const aboutBox = document.querySelector('.about-box')
 const aboutLeftTop = document.querySelector('.about-left-top-box')
+const aboutLeftTBottom = document.querySelector('.about-left-bottom-box')
 const aboutRightTop = document.querySelector('.about-right-top-box')
+const aboutRightBottom = document.querySelector('.about-right-bottom-box')
 
 aboutLeftTop.addEventListener('mouseover', () => {
-  aboutBox.classList.add('hover-left')
+  aboutBox.classList.add('hover-left-top')
 })
 
 aboutLeftTop.addEventListener('mouseleave', () => {
-  aboutBox.classList.remove('hover-left')
+  aboutBox.classList.remove('hover-left-top')
 })
 
 aboutRightTop.addEventListener('mouseover', () => {
-  aboutBox.classList.add('hover-right')
+  aboutBox.classList.add('hover-right-top')
 })
 
 aboutRightTop.addEventListener('mouseleave', () => {
-  aboutBox.classList.remove('hover-right')
+  aboutBox.classList.remove('hover-right-top')
+})
+
+aboutLeftTBottom.addEventListener('mouseover', () => {
+  aboutBox.classList.add('hover-left-bottom')
+})
+
+aboutLeftTBottom.addEventListener('mouseleave', () => {
+  aboutBox.classList.remove('hover-left-bottom')
+})
+
+aboutRightBottom.addEventListener('mouseover', () => {
+  aboutBox.classList.add('hover-right-bottom')
+})
+
+aboutRightBottom.addEventListener('mouseleave', () => {
+  aboutBox.classList.remove('hover-right-bottom')
 })
 
 /** section 5 contact me */
