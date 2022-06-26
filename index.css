@@ -342,54 +342,66 @@ main {
 
 /* section 4 about */
 .about-section-box {
+  
 }
 
 .about-box {
   height: 700px;
-  width: 100%;  
-  display: flex;
+  width: 100%;    
+  position: relative;
 }
 
 .about-box div {
+  height: 50%;
   width: 50%;
   position: absolute;
   overflow: hidden;
+  transition: .4s ease;
 }
 
-.about-left-box {
-  background: url('https://source.unsplash.com/_kUxT8WkoeY') center center/cover no-repeat;
-  height: 100%;
-  flex-basis: 1;
-  background-color: #fff;
-  transition: 0.4s ease;
+.about-left-top-box {
+  background: red center center/cover no-repeat;      
+  top: 0;
   left: 0;
 }
 
-.about-right-box {
-  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover no-repeat;
-  height: 100%;
-  flex-basis: 1;
-  transition: 0.4s ease;
+.about-left-bottom-box {
+  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover no-repeat;     
+  top: 0;
   right: 0;
 }
 
-.about-left-box:hover {
+.about-left-bottom-box {
+  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover no-repeat;    
+  bottom: 0;
+  left: 0;
+}
+
+.about-right-bottom-box {
+  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover no-repeat;    
+  bottom: 0;
+  right: 0;
+}
+
+
+
+.hover-left .about-left-top-box {
+  width: 90%;  
+}
+
+.hover-left .about-right-top-box {
+  width: 10% !important;
+}
+
+.hover-right .about-right-top-box {
   width: 90%;
 }
 
-.about-left-box:hover .about-right-box {
+.hover-right .about-left-top-box {
   width: 10%;
 }
 
-.about-right-box:hover {
-  width: 90%;
-}
-
-.about-right-box:hover .about-left-box {
-  width: 10%;
-}
-
-.about-right-box {
+.about-right-top-box {
   height: 100%;
   width: 50%;
   background-color: #000;

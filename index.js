@@ -168,9 +168,9 @@ btnUp.addEventListener('click', () => {
 })
 
 // shuffles the slide downward
-btnDown.addEventListener('click', () => {  
+btnDown.addEventListener('click', () => {
   frameIndex -= 100
-  
+
   if (frameIndex <= 0) {
     frameIndex = 300
   }
@@ -210,6 +210,27 @@ function addContents(frameIdx = 0) {
   infoBtn.style.backgroundColor = `${gameContents[index].bgColor}`
 }
 
+/** section 4 about */
+const aboutBox = document.querySelector('.about-box')
+const aboutLeftTop = document.querySelector('.about-left-top-box')
+const aboutRightTop = document.querySelector('.about-right-top-box')
+
+aboutLeftTop.addEventListener('mouseover', () => {
+  aboutBox.classList.add('hover-left')
+})
+
+aboutLeftTop.addEventListener('mouseleave', () => {
+  aboutBox.classList.remove('hover-left')
+})
+
+aboutRightTop.addEventListener('mouseover', () => {
+  aboutBox.classList.add('hover-right')
+})
+
+aboutRightTop.addEventListener('mouseleave', () => {
+  aboutBox.classList.remove('hover-right')
+})
+
 /** section 5 contact me */
 const contactMeTitle = document.querySelector('.contact-me-title')
 const contactMeTitleText = 'Contact Me'
@@ -219,22 +240,25 @@ writeContactTitle()
 function writeContactTitle() {
   contactMeTitle.innerText = contactMeTitleText.slice(0, contactMeIndex)
   contactMeIndex++
-  if(contactMeIndex > contactMeTitleText.length) [
-    contactMeIndex = 1
-  ]
+  if (contactMeIndex > contactMeTitleText.length) [(contactMeIndex = 1)]
   setTimeout(writeContactTitle, 300)
 }
 
-const contactMeFieldLabels = document.querySelectorAll('.contact-me-form .form-control label')
-contactMeFieldLabels.forEach(label => {
+const contactMeFieldLabels = document.querySelectorAll(
+  '.contact-me-form .form-control label'
+)
+contactMeFieldLabels.forEach((label) => {
   console.log(label)
-  label.innerHTML = label.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`).join('')
+  label.innerHTML = label.innerText
+    .split('')
+    .map(
+      (letter, idx) =>
+        `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
+    )
+    .join('')
 })
 
-
-
 /** section 6 survey */
-
 
 /** common */
 const arrowBoxes = document.querySelectorAll('.arrow-box')
