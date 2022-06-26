@@ -356,32 +356,34 @@ main {
   position: absolute;
   overflow: hidden;
   transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff; 
+  white-space: nowrap;
 }
 
 .about-left-top-box {
-  background: url('https://source.unsplash.com/_kUxT8WkoeY') center center/cover
-    no-repeat;
+  background: #2a86ba;
   top: 0;
   left: 0;
 }
 
 .about-right-top-box {
-  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover
-    no-repeat;
+  background: #fd3555;
   top: 0;
   right: 0;
 }
 
 .about-left-bottom-box {
-  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover
-    no-repeat;
+  background: #816797;
   bottom: 0;
   left: 0;
 }
 
 .about-right-bottom-box {
-  background: url('https://source.unsplash.com/WiONHd_zYI4') center center/cover
-    no-repeat;
+  background: #ffb866;
   bottom: 0;
   right: 0;
 }
@@ -466,12 +468,6 @@ main {
   width: 10%;
 }
 
-.about-right-top-box {
-  height: 100%;
-  width: 50%;
-  background-color: #000;
-}
-
 /* section 5 contact */
 .contact-box {
   height: 200px;
@@ -488,7 +484,7 @@ main {
 
 .contact-me-form {
   width: 400px;
-  background: #a7988f;
+  background: #ffb866;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -517,12 +513,16 @@ main {
 
 .contact-me-btn {
   width: 100%;
-  background-color: transparent;
-  border-radius: 5px;
-  border-color: transparent;
-  border-bottom-color: #fff;
-  border-right-color: #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #383838;
+  border-radius: 5px;  
   margin-bottom: 15px;
+  translate: .4 ease;
+}
+
+.contact-me-btn:active {
+  transform: scale(.97);
 }
 
 .contact-me-form textarea:focus {
@@ -543,7 +543,7 @@ main {
   width: 100%;
   padding: 15px 0;
   font-size: 18px;
-  color: #fff;
+  color: #333;
 }
 
 .contact-me-form-control textarea {
@@ -554,17 +554,17 @@ main {
   width: 100%;
   padding: 15px 0;
   font-size: 18px;
-  color: #fff;
+  color: #333;
 }
 
 .contact-me-form-control input:focus {
   outline: 0;
-  border-bottom-color: lightblue;
+  border-bottom-color: #40DFEF;
 }
 
 .contact-me-form-control textarea:focus {
   outline: 0;
-  border-bottom-color: lightblue;
+  border-bottom-color: #40DFEF;
 }
 
 .contact-me-form-control label {
@@ -583,19 +583,19 @@ main {
 
 .contact-me-form-control input[type='text']:focus + label span,
 .contact-me-form-control input[type='text']:valid + label span {
-  color: lightblue;
+  color: #40DFEF;
   transform: translateY(-30px);
 }
 
 .contact-me-form-control input[type='email']:focus + label span,
 .contact-me-form-control input[type='email']:valid + label span {
-  color: lightblue;
+  color: #40DFEF;
   transform: translateY(-30px);
 }
 
 .contact-me-form-control textarea:focus + label span,
 .contact-me-form-control textarea:valid + label span {
-  color: lightblue;
+  color: #40DFEF;
   transform: translateY(-30px);
 }
 
