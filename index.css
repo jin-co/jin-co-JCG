@@ -25,8 +25,7 @@ body {
 }
 
 /* header */
-header {
-  height: 100px;
+header {  
   width: 100%;
   background-color: #efefef;
 }
@@ -368,12 +367,14 @@ main {
 }
 
 .about-box div .about-context {
+  max-height: 400px;
   width: 50%;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 10px;
   transform: scale(0);
   position: absolute;
   transition: 0.4s ease;
+  overflow-y: scroll;
 }
 
 .about-left-top-box {
@@ -672,7 +673,7 @@ main {
 .survey-box,
 .survey-result-box {
   height: 400px;
-  width: 600px;
+  width: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -689,6 +690,12 @@ main {
   font-size: 2rem;
   align-items: center;
   justify-content: center;
+}
+
+.survey-box strong {
+  width: 80%;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .survey-choice-form {
