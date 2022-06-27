@@ -360,8 +360,20 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff; 
-  white-space: nowrap;
+  color: #fff;
+}
+
+.about-box div .about-title {  
+  transition: 0.4s ease;
+}
+
+.about-box div .about-context {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.4s ease;
 }
 
 .about-left-top-box {
@@ -388,84 +400,123 @@ main {
   right: 0;
 }
 
+/* left top */
 .hover-left-top .about-left-top-box {
-  height: 90%;
-  width: 90%;
+  height: 80%;
+  width: 80%;
+}
+
+.hover-left-top .about-left-top-box .about-title {
+  transform: scale(0);
+}
+
+.hover-left-top .about-left-top-box .about-context {
+  transform: scale(1);
 }
 
 .hover-left-top .about-right-top-box {
-  height: 90%;
-  width: 10%;
+  height: 80%;
+  width: 20%;
 }
 
 .hover-left-top .about-left-bottom-box {
-  height: 10%;
-  width: 90%;
+  height: 20%;
+  width: 80%;
 }
 
 .hover-left-top .about-right-bottom-box {
-  height: 10%;
-  width: 10%;
+  height: 20%;
+  width: 20%;
 }
 
+/* right top */
 .hover-right-top .about-right-top-box {
-  height: 90%;
-  width: 90%;
+  height: 80%;
+  width: 80%;
+}
+
+
+.hover-right-top .about-right-top-box .about-title {
+  transform: scale(0);
+}
+
+.hover-right-top .about-right-top-box .about-context {
+  transform: scale(1);
 }
 
 .hover-right-top .about-left-top-box {
-  height: 90%;
-  width: 10%;
+  height: 80%;
+  width: 20%;
 }
 
 .hover-right-top .about-left-bottom-box {
-  height: 10%;
-  width: 10%;
+  height: 20%;
+  width: 20%;
 }
 
 .hover-right-top .about-right-bottom-box {
-  height: 10%;
-  width: 90%;
+  height: 20%;
+  width: 80%;
 }
 
+/* left bottom */
 .hover-left-bottom .about-left-bottom-box {
-  height: 90%;
-  width: 90%;
+  height: 80%;
+  width: 80%;
+}
+
+
+.hover-left-bottom .about-left-bottom-box .about-title {
+  transform: scale(0);
+}
+
+.hover-left-bottom .about-left-bottom-box .about-context {
+  transform: scale(1);
 }
 
 .hover-left-bottom .about-left-top-box {
-  height: 10%;
-  width: 90%;
+  height: 20%;
+  width: 80%;
 }
 
 .hover-left-bottom .about-right-top-box {
-  height: 10%;
-  width: 10%;
+  height: 20%;
+  width: 20%;
 }
 
 .hover-left-bottom .about-right-bottom-box {
-  height: 90%;
-  width: 10%;
+  height: 80%;
+  width: 20%;
 }
 
+/* right bottom */
 .hover-right-bottom .about-right-bottom-box {
-  height: 90%;
-  width: 90%;
+  height: 80%;
+  width: 80%;
+}
+
+
+.hover-right-bottom .about-right-bottom-box .about-title {
+  transform: scale(0);
+}
+
+.hover-right-bottom .about-right-bottom-box .about-context {
+  transform: scale(1);
 }
 
 .hover-right-bottom .about-left-top-box {
-  height: 10%;
-  width: 10%;
+  height: 20%;
+  width: 20%;
 }
 
 .hover-right-bottom .about-right-top-box {
-  height: 10%;
-  width: 90%;
+  height: 20%;
+  width: 80%;
 }
 
 .hover-right-bottom .about-left-bottom-box {
-  height: 90%;
-  width: 10%;
+  height: 80%;
+  width: 20%;
 }
 
 /* section 5 contact */
@@ -516,13 +567,13 @@ main {
   color: #fff;
   font-size: 1.2rem;
   background-color: #383838;
-  border-radius: 5px;  
+  border-radius: 5px;
   margin-bottom: 15px;
-  translate: .4 ease;
+  translate: 0.4 ease;
 }
 
 .contact-me-btn:active {
-  transform: scale(.97);
+  transform: scale(0.97);
 }
 
 .contact-me-form textarea:focus {
@@ -559,12 +610,12 @@ main {
 
 .contact-me-form-control input:focus {
   outline: 0;
-  border-bottom-color: #40DFEF;
+  border-bottom-color: #40dfef;
 }
 
 .contact-me-form-control textarea:focus {
   outline: 0;
-  border-bottom-color: #40DFEF;
+  border-bottom-color: #40dfef;
 }
 
 .contact-me-form-control label {
@@ -583,19 +634,19 @@ main {
 
 .contact-me-form-control input[type='text']:focus + label span,
 .contact-me-form-control input[type='text']:valid + label span {
-  color: #40DFEF;
+  color: #40dfef;
   transform: translateY(-30px);
 }
 
 .contact-me-form-control input[type='email']:focus + label span,
 .contact-me-form-control input[type='email']:valid + label span {
-  color: #40DFEF;
+  color: #40dfef;
   transform: translateY(-30px);
 }
 
 .contact-me-form-control textarea:focus + label span,
 .contact-me-form-control textarea:valid + label span {
-  color: #40DFEF;
+  color: #40dfef;
   transform: translateY(-30px);
 }
 
