@@ -25,7 +25,30 @@
     width: 100%;
   }
 
-  /* .games-box-c {
+  .games-box-c {
     flex-direction: column;
-  } */
+  }
+
+  .panel-left, .panel-right {
+    height: 150px;    
+    width: 100%;        
+  }
+
+  .btn-panel-up {    
+    height: 100%;
+    width: 70px;
+    left: 0; 
+    transform: translate(0px, -75px);   
+    bottom: 0;
+  }
+
+  .btn-panel-up:focus {
+    transform: translate(0px, -75px) !important;   
+  }
+
+  .btn-panel-down {    
+    height: 100%;
+    width: 70px;
+    transform: translate(0px, -75px);   
+  }
 }

@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Poppins';
   overflow-x: hidden;
@@ -210,8 +214,7 @@ main {
 }
 
 .panel-left {
-  width: 30%;
-  background: blue;
+  width: 30%;  
   position: relative;
 }
 
