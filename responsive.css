@@ -29,26 +29,48 @@
     flex-direction: column;
   }
 
-  .panel-left, .panel-right {
-    height: 150px;    
-    width: 100%;        
+  .panel-left,
+  .panel-right {
+    height: 150px;
+    width: 100%;
   }
 
-  .btn-panel-up {    
+  .btn-panel-up {
     height: 100%;
     width: 70px;
-    left: 0; 
-    transform: translate(0px, -75px);   
+    left: 0;
+    transform: translate(0px, -75px);
     bottom: 0;
+    background-color: transparent;
+    color: #fff;
   }
 
   .btn-panel-up:focus {
-    transform: translate(0px, -75px) !important;   
+    transform: translate(0px, -75px) !important;
+    background-color: transparent;
+    border: none;
   }
 
-  .btn-panel-down {    
+  .btn-panel-down {
     height: 100%;
     width: 70px;
-    transform: translate(0px, -75px);   
+    transform: translate(0px, -75px);
+    background-color: transparent;
+  }
+
+  .btn-panel-down:focus {
+    background-color: transparent;
+    border: none;
+  }
+
+  .img-guide-text {
+    width: 100vw;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .about-box div .about-context {
+    height: 90%;
+    width: 90%;
   }
 }

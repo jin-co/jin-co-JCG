@@ -194,9 +194,19 @@ info.addEventListener('mouseover', () => {
   infoText.classList.add('show-info')
 })
 
+info.addEventListener('click', () => {
+  if(infoText.className.includes('show-info')) {
+    infoText.classList.remove('show-info')  
+  } else {
+    infoText.classList.add('show-info')
+  }
+})
+
 infoText.addEventListener('mouseleave', () => {
   infoText.classList.remove('show-info')
 })
+
+
 
 addContents()
 
