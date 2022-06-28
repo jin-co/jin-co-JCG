@@ -30,6 +30,7 @@ body {
 
 /* header */
 header {  
+  height: 150px;
   width: 100%;
   background-color: #efefef;
 }
@@ -182,14 +183,26 @@ main {
 }
 
 .panel h3 {
-  opacity: 0;
-  white-space: nowrap;
-  transition: var(--transition-speed-10) ease-in var(--transition-speed-4);
+  opacity: 0;    
+  white-space: nowrap;  
+  transform: scale(0);
+  transition: var(--transition-speed-10) ease-in var(--transition-speed-4);  
 }
 
 .panel.expand h3 {
-  opacity: 1;
+  opacity: 1;  
   background-color: rgba(0, 0, 0, 0.5);
+  animation: scaleUP .1s forwards;
+}
+
+@keyframes scaleUP {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 .panel h3 a {
