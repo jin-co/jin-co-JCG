@@ -30,7 +30,7 @@ body {
 
 /* header */
 header {
-  height: 150px;
+  min-height: 150px;
   width: 100%;
   background-color: #efefef;
 }
