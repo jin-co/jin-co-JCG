@@ -193,13 +193,13 @@
         </div>
         <!-- / scroll arrow -->
 
-        <div class="about-box ">
+        <div class="about-box">
           <div class="about-left-top-box">
             <h2 class="about-title">Introduction</h2>
             <div class="about-context">
               <p>Game website</p>
-              <small>Created by Kwangjin Baek</small>  
-            </div>          
+              <small>Created by Kwangjin Baek</small>
+            </div>
           </div>
 
           <div class="about-right-top-box">
@@ -213,22 +213,27 @@
             </div>
           </div>
 
-          <div class="about-left-bottom-box">            
+          <div class="about-left-bottom-box">
             <h2 class="about-title">Problems</h2>
             <div class="about-context">
-              <p class="">&nbsp;&nbsp;Needed one source of platform to hold all the personal projects to showcase</p>
-
+              <p class="">
+                &nbsp;&nbsp;Needed one source of platform to hold all the
+                personal projects to showcase
+              </p>
             </div>
           </div>
 
           <div class="about-right-bottom-box">
             <h2 class="about-title">Solutions</h2>
             <div class="about-context">
-              <p class="">&nbsp;&nbsp;Integrated projects that are written in different languages such as C#, Javascript into one platform without revealing the source codes by games written in other back-end languages other than javascript to be downloaded</p>
-
+              <p class="">
+                &nbsp;&nbsp;Integrated projects that are written in different
+                languages such as C#, Javascript into one platform without
+                revealing the source codes by games written in other back-end
+                languages other than javascript to be downloaded
+              </p>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -301,18 +306,18 @@
           <form class="survey-choice-form">
             <div class="survey-choice-box">
               <label class="survey-choice choice-great form-control">
-                <input type="radio" name="survey" />
+                <input type="radio" name="survey" value="great" />
                 <i class="fa-3x fas fa-grin-stars"></i>
                 Great
               </label>
 
               <label class="survey-choice choice-great form-control">
-                <input type="radio" name="survey" />
+                <input type="radio" name="survey" value="average" />
                 <i class="fa-3x fas fa-meh"></i>
                 Average</label
               >
               <label class="survey-choice choice-great form-control">
-                <input type="radio" name="survey" />
+                <input type="radio" name="survey" value="bad" />
                 <i class="fa-3x fas fa-frown"></i>
                 Bad</label
               >
@@ -325,6 +330,30 @@
             <strong>Thank you!</strong>
             <p class="survey-choice-selected"></p>
             <small>Your feedback will make this web site better!</small>
+            <button class="btn mt-3">Show result</button>
+          </div>
+
+          <div class="survey-statistics-box">
+            <i class="fas fa-chart-line fa-3x"></i>
+
+            <div class="statistics-item-box">
+              <div class="statistics-item">
+                <i class="fas fa-grin-stars"></i>
+                <input type="range" step="1" value="0">
+              </div>
+
+              <div class="statistics-item">
+                <i class="fas fa-meh"></i>
+                <input type="range" step="1" value="0">
+              </div>
+
+              <div class="statistics-item">
+                <i class="fas fa-frown"></i>
+                <input type="range" step="1" value="0">
+              </div>
+            </div>
+
+            <button class="btn">Back</button>
           </div>
         </div>
       </section>

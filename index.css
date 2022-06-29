@@ -29,7 +29,7 @@ body {
 }
 
 /* header */
-header {  
+header {
   height: 150px;
   width: 100%;
   background-color: #efefef;
@@ -183,16 +183,16 @@ main {
 }
 
 .panel h3 {
-  opacity: 0;    
-  white-space: nowrap;  
+  opacity: 0;
+  white-space: nowrap;
   transform: scale(0);
-  transition: var(--transition-speed-10) ease-in var(--transition-speed-4);  
+  transition: var(--transition-speed-10) ease-in var(--transition-speed-4);
 }
 
 .panel.expand h3 {
-  opacity: 1;  
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  animation: scaleUP .1s forwards;
+  animation: scaleUP 0.1s forwards;
 }
 
 @keyframes scaleUP {
@@ -227,7 +227,7 @@ main {
 }
 
 .panel-left {
-  width: 30%;  
+  width: 30%;
   position: relative;
 }
 
@@ -378,7 +378,7 @@ main {
   color: #fff;
 }
 
-.about-box div .about-title {  
+.about-box div .about-title {
   transition: 0.4s ease;
 }
 
@@ -452,7 +452,6 @@ main {
   width: 80%;
 }
 
-
 .hover-right-top .about-right-top-box .about-title {
   transform: scale(0);
 }
@@ -482,7 +481,6 @@ main {
   width: 80%;
 }
 
-
 .hover-left-bottom .about-left-bottom-box .about-title {
   transform: scale(0);
 }
@@ -511,7 +509,6 @@ main {
   height: 80%;
   width: 80%;
 }
-
 
 .hover-right-bottom .about-right-bottom-box .about-title {
   transform: scale(0);
@@ -686,8 +683,7 @@ main {
   position: relative;
 }
 
-.survey-box,
-.survey-result-box {
+.survey-box {
   height: 400px;
   width: 70%;
   position: absolute;
@@ -718,6 +714,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: 0.4s ease;
 }
 
 .survey-choice-form .survey-choice-box {
@@ -767,6 +764,64 @@ main {
 }
 
 .survey-result-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.4s ease;
+}
+
+.survey-result-box small {
+}
+
+.survey-statistics-box {
+  transform: scale(0);
+  position: absolute;
+  transition: 0.4s ease;
+  text-align: center;
+}
+
+.survey-statistics-box > i {
+  margin-bottom: 70px;
+}
+
+.survey-statistics-box button {
+  width: 100%;
+}
+
+.survey-statistics-item-box {
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.statistics-item {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+  align-items: center;
+}
+
+.survey-box.show-survey-result .survey-result-box {
+  position: initial;
+  transform: scale(1);
+}
+
+.survey-box.show-survey-result .survey-choice-form {
+  position: absolute;
+  transform: scale(0);
+}
+
+.survey-box.show-statistics .survey-statistics-box {
+  position: initial;
+  transform: scale(1);
+}
+
+.survey-box.show-statistics .survey-choice-form {
+  position: absolute;
   transform: scale(0);
 }
 
@@ -854,6 +909,7 @@ section {
   align-items: center;
   color: #fff;
   padding: 0 150px;
+  text-align: center;
 }
 
 .arrow-box {

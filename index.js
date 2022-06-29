@@ -195,8 +195,8 @@ info.addEventListener('mouseover', () => {
 })
 
 info.addEventListener('click', () => {
-  if(infoText.className.includes('show-info')) {
-    infoText.classList.remove('show-info')  
+  if (infoText.className.includes('show-info')) {
+    infoText.classList.remove('show-info')
   } else {
     infoText.classList.add('show-info')
   }
@@ -205,8 +205,6 @@ info.addEventListener('click', () => {
 infoText.addEventListener('mouseleave', () => {
   infoText.classList.remove('show-info')
 })
-
-
 
 addContents()
 
@@ -287,6 +285,34 @@ contactMeFieldLabels.forEach((label) => {
 })
 
 /** section 6 survey */
+const surveyBox = document.querySelector('.survey-box')
+const surveyForm = document.querySelector('.survey-choice-form')
+const surveyResult = document.querySelector('.survey-result-box')
+const surveyStatistics = document.querySelector('.survey-statistics-box')
+const btnSurveyBack = document.querySelector('.survey-statistics-box button')
+const btnSurveyShowResult = document.querySelector('.survey-result-box button')
+
+surveyForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  let selectedValue
+  try {
+    selectedValue = surveyForm.querySelector(
+      'input[name="survey"]:checked'
+    ).value
+    surveyBox.classList.add('show-survey-result')
+  } catch {
+    alert('Please select at least one option')
+  }
+})
+
+btnSurveyShowResult.addEventListener('click', () => {
+  surveyBox.classList.remove('show-survey-result')
+  surveyBox.classList.add('show-statistics')
+})
+
+btnSurveyBack.addEventListener('click', () => {  
+  surveyBox.classList.remove('show-statistics')
+})
 
 /** common */
 const arrowBoxes = document.querySelectorAll('.arrow-box')
