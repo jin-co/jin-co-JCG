@@ -6,12 +6,35 @@
   }
 
   header nav ul {
+    height: 200px;
+    width: 200px;
     flex-direction: column;
     padding: 0;
+    position: fixed;
+    top: 110px;
+    left: 10px;
+    z-index: 3;
+    font-size: 1.1rem;   
+    background-color: #7D9D9C;     
+    border-radius: 5px;  
+    transform: translateY(-200%);
+    transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);      
+  }
+
+  .menu-icon-clicked + nav ul {
+    transform: translateY(0);
   }
 
   header nav ul li {
-    width: 100%;
+    width: 100%;    
+  }
+
+  header nav ul li a {
+    color: #fff;
+  }
+
+  header .menu-icon-box {
+    transform: scale(1);
   }
 }
 

@@ -310,7 +310,7 @@ btnSurveyShowResult.addEventListener('click', () => {
   surveyBox.classList.add('show-statistics')
 })
 
-btnSurveyBack.addEventListener('click', () => {  
+btnSurveyBack.addEventListener('click', () => {
   surveyBox.classList.remove('show-statistics')
 })
 
@@ -325,4 +325,10 @@ window.addEventListener('scroll', () => {
       arrow.classList.remove('show-arrow')
     }
   })
+})
+
+//header
+const menuIconBtn = document.querySelector('.menu-icon-box.btn')
+menuIconBtn.addEventListener('click', () => {
+  menuIconBtn.classList.toggle('menu-icon-clicked')
 })
