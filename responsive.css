@@ -1,24 +1,23 @@
-@media all and (max-width: 880px) {
+@media all and (max-width: 880px) {  
   header nav {
     margin-top: 20px;
     flex-direction: column;
-    gap: 30px;
+    gap: 30px;    
   }
 
   header nav ul {
-    height: 200px;
-    width: 200px;
+    height: 200px;    
     flex-direction: column;
     padding: 0;
     position: fixed;
-    top: 110px;
-    left: 10px;
-    z-index: 3;
-    font-size: 1.1rem;   
-    background-color: #7D9D9C;     
+    top: 70px;            
+    z-index: 4;
+    font-size: 1.1rem;       
     border-radius: 5px;  
     transform: translateY(-200%);
     transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);      
+    padding: 0 10px;    
+    gap: 3px;
   }
 
   .menu-icon-clicked + nav ul {
@@ -27,10 +26,28 @@
 
   header nav ul li {
     width: 100%;    
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+  
+  header nav ul li:first-child {
+    background-color: #2a86ba;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  header nav ul li:nth-of-type(2) {
+    background-color: #fd3555;    
+  }
+  
+  header nav ul li:nth-child(3) {
+    background-color: #816797;
   }
 
-  header nav ul li a {
-    color: #fff;
+  header nav ul li:last-child {
+    background-color: #ffb866;
+    border-radius: 0 0 5px 5px;
   }
 
   header .menu-icon-box {
