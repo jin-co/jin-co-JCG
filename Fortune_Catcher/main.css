@@ -28,6 +28,8 @@ body {
 .title {
   font-size: 2.2rem;
   margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 /* first page */
@@ -46,6 +48,7 @@ body {
   justify-content: center;
   font-size: .8rem;
   transition: .4s ease;
+  overflow: hidden;
 }
 
 .btn {
@@ -69,6 +72,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
 img {
@@ -132,5 +136,49 @@ img {
   left: 10px;
   margin: 0;
   transform: translate(-50%, -50%);
+}
+
+@media all and (max-width: 840px) {
+  .page-third-text-box {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    align-items: flex-start;
+    position: initial;
+  }
+
+  .game-screen {
+    margin-bottom: 100px;
+  }
+
+  .btn-reset {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media all and (max-width: 645px) {
+  .title {    
+    width: 50%;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}
+
+@media all and (max-width: 587px) {
+  .title {    
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+}
+
+@media all and (max-width: 508px) {
+  .title {    
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
 }
 
