@@ -55,6 +55,11 @@ header .menu-icon-box {
   z-index: 4;
 }
 
+header .menu-icon-box:active {  
+  transform: scale(.95);
+  border-color: #e8630a;
+}
+
 header .menu-icon-box:active {
   transform: scale(0.9);
 }

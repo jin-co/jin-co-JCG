@@ -328,7 +328,7 @@ window.addEventListener('scroll', () => {
 })
 
 //header
-const menuIconBtn = document.querySelector('.menu-icon-box.btn')
+const menuIconBtn = document.querySelector('.menu-icon-box')
 menuIconBtn.addEventListener('click', () => {
   menuIconBtn.classList.toggle('menu-icon-clicked')
 })
