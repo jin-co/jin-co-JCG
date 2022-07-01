@@ -148,9 +148,10 @@ const gameContents = [
 const leftFrames = document.querySelectorAll('.panel-left div')
 const rightFrames = document.querySelectorAll('.panel-right div')
 let frameIndex = 100
+let btnActivated = false
 
 // shuffles the slide upward
-btnUp.addEventListener('click', () => {
+btnUp.addEventListener('click', () => {  
   frameIndex += 100
   if (frameIndex > 300) {
     frameIndex = 0
@@ -165,13 +166,18 @@ btnUp.addEventListener('click', () => {
   rightFrames.forEach((frame) => {
     frame.style.transform = `translateY(-${300 - frameIndex}%)`
   })
+  btnActivated = true
 })
 
 // shuffles the slide downward
 btnDown.addEventListener('click', () => {
   frameIndex -= 100
 
-  if (frameIndex <= 0) {
+  if (!btnActivated) {
+    frameIndex = 300
+  } 
+
+  if (frameIndex < 0) {
     frameIndex = 300
   }
 
@@ -185,6 +191,7 @@ btnDown.addEventListener('click', () => {
   rightFrames.forEach((frame) => {
     frame.style.transform = `translateY(-${300 - frameIndex}%)`
   })
+  btnActivated = true
 })
 
 const info = document.querySelector('.img-guide-btn')
@@ -210,7 +217,7 @@ addContents()
 
 // adds game content to guide box to show related content description
 function addContents(frameIdx = 0) {
-  console.log('fram index: ', frameIdx)
+  console.log('frame index: ', frameIdx)
   const index = frameIdx / 100
   infoText.innerHTML = gameContents[`${index}`].description
   infoText.style.backgroundColor = `${gameContents[index].bgColor}`
