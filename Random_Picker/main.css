@@ -315,5 +315,13 @@ body {
     }
 }
 
+@media all and (max-width: 640px) {
+    h2.title {
+        font-size: 1rem;
+        position: relative;
+        left: -15px;
+    }
+}
+
 
 
