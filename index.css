@@ -907,6 +907,19 @@ main {
   }
 }
 
+/* c# winform section */
+.win-imgs {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.win-img {
+  height: 400px;
+  width: 400px;
+}
+/* c# winform section */
+
 /* footer */
 footer {
   height: 300px;
